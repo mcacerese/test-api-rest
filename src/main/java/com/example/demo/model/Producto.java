@@ -37,22 +37,21 @@ public class Producto implements Serializable
     private String descripcion;
 
     @Column(name="PRECIOUNIT")
-    private long precioUnit;
+    private Double precioUnit;
 
     @Column(name="PRECIOUNITUF", columnDefinition = "int default 0")
-    private long precioUnitUf;
+    private Double precioUnitUf;
 
     @Column(name="EXISTENCIA")
     private long existencia;
 
-    public long getProductoId() {
+    public Long getProductoId() {
         return productoId;
     }
 
-    public void setProductoId(long productoId) {
+    public void setProductoId(Long productoId) {
         this.productoId = productoId;
     }
-
 
     public Proveedor getProveedor() {
         return proveedor;
@@ -78,28 +77,39 @@ public class Producto implements Serializable
         this.descripcion = descripcion;
     }
 
-    public long getPrecioUnit() {
+    public Double getPrecioUnit() {
         return precioUnit;
     }
 
-    public void setPrecioUnit(long precioUnit) {
+    public void setPrecioUnit(Double precioUnit) {
         this.precioUnit = precioUnit;
     }
 
-    public long getExistencia() {
+    public Long getExistencia() {
         return existencia;
     }
 
-    public void setExistencia(long existencia) {
+    public void setExistencia(Long existencia) {
         this.existencia = existencia;
     }
 
-    public long getPrecioUnitUf() {
+    public Double getPrecioUnitUf() {
         return precioUnitUf;
     }
 
-    public void setPrecioUnitUf(long precioUnitUf) {
+    public void setPrecioUnitUf(Double precioUnitUf) {
         this.precioUnitUf = precioUnitUf;
+    }
+
+    @Override
+    public String toString() {
+        return "{ productoId=" + productoId+
+                        ", descripcion=" + descripcion + 
+                        ", existencia=" + existencia +
+                        ", precioUnit=" + precioUnit + 
+                        ", precioUnitUf=" + precioUnitUf + 
+                        ", categoria=" + categoria.getNombreCat() +
+                        ", proveedor=" + proveedor.getNombreProv() + "}";
     }
 
 }
