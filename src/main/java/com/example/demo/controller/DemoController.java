@@ -21,13 +21,13 @@ import org.springframework.web.bind.annotation.PostMapping;
 
 
 @RestController
-@RequestMapping(path = "/producto", produces = MediaType.APPLICATION_JSON_VALUE)
+@RequestMapping(path = "/productos", produces = MediaType.APPLICATION_JSON_VALUE)
 public class DemoController
 {
     @Autowired
     IProductoService iProductoService;
     
-    @GetMapping("/")
+    @GetMapping("")
     @ResponseStatus(value = HttpStatus.OK)
     public List<Producto> getProducts() 
     {
