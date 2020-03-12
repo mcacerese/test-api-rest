@@ -29,7 +29,7 @@ mvn clean package
 ```
 Una vez creado el .war se debe desplegar en el manager app del servidor Tomcat, o de lo contrario, copiar el .war en el directorio tomcat/webapps/ y reiniciar el servidor.
 
-Otra manera de levantar el proyecto es desde un IDE y sobre el archivo src\main\java\com\example\demo\DemoApplication.java correr el proyecto, esto hará que se levante el servidor web embebido que trae spring boot.
+Otra manera de levantar el proyecto es desde un IDE y sobre el archivo **src\main\java\com\example\demo\DemoApplication.java** correr el proyecto, esto hará que se levante el servidor web embebido que trae spring boot.
 ### Servicios 
 Los servicios que posee la API son:
 * [url:port]/productos = Lista todos los productos almacenados.
